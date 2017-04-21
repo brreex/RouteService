@@ -15,7 +15,7 @@ export class MyGuard implements CanActivate {
       console.log(route);
       console.log(state);
       try {
-        this.db.getProfile(route.params['id']);
+       if(this.db.getProfile(route.params['id'])!==null);
         return true;
       } catch (error) {
         this.router.navigate(['error']);

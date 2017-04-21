@@ -12,7 +12,13 @@ export class DbService {
   getData():[{id:string,name:string,email:string}]{
       return this.sampledata;
   }
-  getProfile(id:string):{id:string,name:string,email:string}{
-    return this.sampledata[parseInt(id)-1];
+  getProfile(id:string){
+    try{
+        return this.sampledata[parseInt(id)-1];
+    }
+    catch(err){
+      return null;
+    }
+    
   }
 }
