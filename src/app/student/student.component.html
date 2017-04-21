@@ -1,0 +1,11 @@
+<h1>
+  Welcome To Students Page
+</h1>
+<div>
+  <ul>
+    <li *ngFor="let student of studentData"><a [routerLink]="['profile',student.id]">{{student.name}}</a></li>
+  </ul>
+  <router-outlet>
+    
+  </router-outlet>
+</div>
